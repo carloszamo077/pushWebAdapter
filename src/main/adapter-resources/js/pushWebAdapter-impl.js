@@ -1,6 +1,6 @@
 function encode(user, password) {
 	return {
-		result: com.gbm.utils.Encode.Code(user, password)
+		result: com.gbm.utils.Encode.code(user, password)
 	};
 }
 

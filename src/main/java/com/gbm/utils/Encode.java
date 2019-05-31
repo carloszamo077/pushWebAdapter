@@ -4,6 +4,9 @@ import java.util.Base64;
 
 public class Encode {
 
+  private Encode() {
+  }
+
   /**
    * Encode to Base64.
    * 
@@ -11,8 +14,7 @@ public class Encode {
    * @param password
    * @return
    */
-  public static Object Code(String user, String password) {
-    String encoding = Base64.getEncoder().encodeToString((user + ":" + password).getBytes());
-    return encoding;
+  public static Object code(String user, String password) {
+    return Base64.getEncoder().encodeToString((user + ":" + password).getBytes());
   }
 }
