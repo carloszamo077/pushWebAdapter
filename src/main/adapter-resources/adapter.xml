@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Licensed Materials - Property of IBM
+	5725-I43 (C) Copyright IBM Corp. 2011, 2016. All Rights Reserved.
+	US Government Users Restricted Rights - Use, duplication or
+	disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<mfp:adapter name="pushWebAdapter"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xmlns:mfp="http://www.ibm.com/mfp/integration"
+			 xmlns:http="http://www.ibm.com/mfp/integration/http">
+
+	<displayName>pushWebAdapter</displayName>
+	<description>pushWebAdapter</description>
+	<connectivity>
+		<connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+			<protocol>http</protocol>
+			<domain>L540-CZRAMIREZ</domain>
+			<port>9080</port>
+			<connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
+			<socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+			<maxConcurrentConnectionsPerNode>50</maxConcurrentConnectionsPerNode>
+		</connectionPolicy>
+	</connectivity>
+
+<procedure name="getToken" scope="token"/>
+	<procedure name="sendPush" scope="token"/>
+	<procedure name="getApps" scope="token"/>
+	<procedure name="getApp" scope="token"/>
+	<procedure name="getDevices" scope="token"/>
+	<procedure name="getPushDeviceRegistration" scope="token"/>
+	<property name="operatorUser" displayName="Operator user" defaultValue="operator"  />
+	<property name="operatorPassword" displayName="Operator password" defaultValue="operator"  />
+	<!--<property name="user" displayName="username" defaultValue="gbm"  />
+	<property name="password" displayName="password"  defaultValue="gbm"/>
+	<property name="token" displayName="access token" defaultValue="1234567890"  />
+	-->
+</mfp:adapter>
